@@ -7,8 +7,30 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-row class="card-footer">
+    <ion-col>
+      <button ion-button block color="primary" (click)="startCounter()">Start</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button block color="danger" (click)="StopCounter()">Stop</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button block color="secondary" (click)="resetCount()">Reset</button>
+    </ion-col>
+  </ion-row>
+  <ion-card class="count-card-detail" text-center>
+    <ion-card-header>
+      Jump Counts:
+    </ion-card-header>
+    <ion-card-content no-padding>
+      <ion-item>
+        <ion-row>
+          <ion-col text-center>
+            <h1>{{stepCounter}}</h1>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
